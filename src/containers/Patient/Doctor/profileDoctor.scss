@@ -1,0 +1,20 @@
+.infor-doctor {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding-top: 10px;
+    .content-left {
+        width: 90px;
+        height: 90px;
+        border: 1px solid #333;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+    }
+    .content-right {
+        height: 90px;
+        width: 600px;
+        border: 1px solid greenyellow;
+    }
+}

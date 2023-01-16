@@ -1,0 +1,54 @@
+.manage-clinic-container {
+    margin: 0px 20px 20px 20px;
+    .clinic-body {
+        display: flex;
+        justify-content: space-around;
+        .clinic-content {
+            width: 70%;
+        }
+        .clinic-image {
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title-image {
+                font-size: 20px;
+                text-align: center;
+            }
+            .preview-image {
+                height: 200px;
+                width: 200px;
+               background-color: #eee;
+               background-size: contain;
+               background-position: center;
+               background-repeat: no-repeat;
+                cursor: pointer;
+            }
+            .btn-view {
+                display: flex;
+                width: 100%;
+                justify-content:space-around;
+                margin-bottom: 10px;
+                .btn-view-left  {
+                    border-radius: 10px;
+                    border: 1px solid red;
+                    width: 45%;
+                }   
+                .btn-view-right {
+                    border-radius: 10px;
+                    border: 1px solid red;
+                    width: 45%;
+                }  
+                .btn-view-left:hover {
+                    opacity: 0.6;
+                }
+                .btn-view-right:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+    .manage-clinic-editor {
+
+    }
+}

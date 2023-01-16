@@ -1,0 +1,21 @@
+
+.slick-prev {
+    background-color: lightblue !important;
+   
+    left: -10px !important;
+    z-index: 100 !important;
+    width: 44px !important;
+    height: 48px !important;
+}
+
+.slick-next {
+    background-color: lightblue !important;
+   
+    right: -10px !important;
+    width: 44px !important;
+    height: 48px !important;
+}
+
+.slick-disabled {
+    display: none !important;
+}

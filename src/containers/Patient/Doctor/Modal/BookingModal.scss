@@ -1,0 +1,45 @@
+.form-modal-container {
+    width: 2000px;
+    .booking-content {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        border: 1px solid salmon;
+        .booking-header {
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .icon {
+                display: flex;
+                justify-content: space-between;
+                i {
+                    cursor: pointer;
+                }
+            }
+        }
+        .booking-body {
+            height: 100%;
+            border: 1px solid red;
+            padding: 5px;
+        }
+        .booking-footer {
+            border: 1px solid red;
+           
+            flex-direction: column;
+            .btn-booking {
+                display: flex;
+                gap: 10px;
+                padding: 5px;
+                justify-content: flex-end;
+                button {
+                    width: 120px;
+                    height: 30px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+

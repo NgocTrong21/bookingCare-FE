@@ -1,0 +1,51 @@
+.manage-specialty-container {
+    margin-bottom: 20px;
+    .specialty-content {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 100px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        .user-redux-image {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            align-items: center;
+            .title-image {
+                font-size: 20px;
+                text-align: center;
+            }
+            .preview-image {
+                height: 200px;
+                width: 200px;
+               background-color: rgb(250, 248, 248);
+               background-size: contain;
+               background-position: center;
+               background-repeat: no-repeat;
+                cursor: pointer;
+            }  
+            .btn-view {
+                display: flex;
+                width: 100%;
+                justify-content:space-around;
+                .btn-view-left  {
+                    border-radius: 10px;
+                    border: 1px solid red;
+                    width: 45%;
+                }   
+                .btn-view-right {
+                    border-radius: 10px;
+                    border: 1px solid red;
+                    width: 45%;
+                }  
+                .btn-view-left:hover {
+                    opacity: 0.6;
+                }
+                .btn-view-right:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+

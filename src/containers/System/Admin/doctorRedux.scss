@@ -1,0 +1,39 @@
+.manage-doctor-container {
+    padding: 5px;
+    
+    .manage-doctor-title {
+        text-align: center;
+        margin: 15px 0;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .manage-doctor-header {
+        display: flex;
+        gap: 15px;
+
+        .left-content {
+            width: 30%;
+        }
+        .right-content {
+            width: 70%;
+        }
+    }
+    .btn {
+        margin-bottom: 20px;
+        .create-content-doctor {
+            background-color: aqua;
+        }
+        .save-content-doctor {
+            background-color: orange;
+        }
+        .create-content-doctor:hover {
+            opacity: 0.6;
+        }
+        .save-content-doctor {
+            opacity: 0.6;
+        }
+    }
+  
+   
+}

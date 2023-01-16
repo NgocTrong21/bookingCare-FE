@@ -1,0 +1,37 @@
+.specialty-container {
+    height: 300px;
+  
+    
+
+    .specialty-content {
+        margin: 0 90px;
+
+        .specialty-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+
+            .title-specialty {
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+        .img-customize {
+            height: auto;
+           .bg-image {
+            background-position: center;
+            background-size: cover;
+            height: 190px;
+            width: 300px;
+            margin-bottom: 5px;
+
+           }
+           .specialty-name {
+            width: 300px;
+           }
+        }
+        
+    }
+    
+}

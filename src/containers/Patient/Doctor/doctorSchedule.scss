@@ -1,0 +1,36 @@
+.doctor-schedule-container {
+    .all-schedule {
+        margin-bottom: 10px;
+        .select-schedule {
+            width: 140px;
+        }
+    }
+
+    .doctor-schedule-content {
+        
+        .title-schedule {
+            text-transform: uppercase;
+           
+        }
+        .schedule-button {
+            display: flex;
+            margin-top: 10px;
+            gap: 10px;
+            flex-wrap: wrap;
+            .btn-time {
+                height: 40px;
+                font-weight: bolder;
+                border-radius: 5px;
+                width: 120px;
+            }
+            .btn-time:hover {
+                background-color: aqua;
+                color: white;
+            }
+        }
+
+        .choose-schedule {
+            margin-top: 20px;
+        }
+    }
+}

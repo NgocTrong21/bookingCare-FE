@@ -1,0 +1,41 @@
+.outstanding-doctor-container {
+    height: 450px;
+    
+
+    .outstanding-doctor-content {
+        margin: 0 90px;
+
+        .outstanding-doctor-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+
+            .title-outstanding-doctor {
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+
+        .outstanding-doctor-body {
+            .img-customize {
+               
+                text-align: center;
+                padding: 50px;
+                .bg-image {
+                    // background-image: url('../../../assets/images/doctors/103848anh-dai-dien-bs.jpg');
+                    background-position: center;
+                    background-size: cover;
+                    height: 237px;
+                    width: 100%;
+                    border: 1px solid gainsboro;
+                    border-radius: 50%;
+                    background-color: rgb(250, 248, 248);
+                }
+            }
+        }
+       
+       
+    }
+    
+}

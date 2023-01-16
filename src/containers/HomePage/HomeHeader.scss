@@ -1,0 +1,140 @@
+.home-header-container {
+    width: 100%;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgb(191, 191, 191);
+    .home-header-content {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        padding: 0 20px;
+
+        .left-content {
+            width: 25%;     
+            display: flex;
+            align-items: center;
+            .header-logo {
+                background-image: url('../../assets/images/logo-bookingcare.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 80%;
+                width: 50%; 
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            .fa-bars {
+                font-size: 25px;
+                color: gray;
+                cursor: pointer;
+            }
+        }
+
+        .center-content {
+            width: 50%;
+          
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .child-content {
+                text-align: center;
+            }
+        }
+
+        .right-content {
+            width: 25%;
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .home-header-banner {
+        background: url('../../assets/images/background-bookingcare.jpg');
+        height: 600px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+
+        .content-up {
+            height: 65%;
+            padding-top: 25px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
+            .title1{
+                text-align: center;
+                font-size: 30px;
+                text-shadow: 1px 1px 1px #333;
+                margin-top: 30px;
+                margin-bottom: 5px;
+                color: white;
+            }
+            .title2{
+                text-align: center;
+                font-size: 30px;
+                text-shadow: 1px 1px 1px #333;
+                color: white;
+            }
+        
+            .search {
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px auto;
+                padding: 10px;
+                border-radius: 25px;
+                background-color: #f7d800;
+        
+                input {
+                    height: 30px;
+                    width: 360px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .content-down {
+            height: 35%;
+            display: flex;
+            align-items: flex-end;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+            .options {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                grid-gap: 30px;
+                .option-child {
+                    width: 100px;
+                    cursor: pointer;
+                    .icon-child {
+                        background: white;
+                        height: 40px;
+                        width: 40px;
+                        padding: 10px;
+                        border-radius: 50%;
+                        text-align: center;
+                        margin: 0 auto;
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                    .text-child {
+                        font-size: 16px;
+                        font-weight: 500;
+                        
+                    }
+                    .text-child:hover {
+                        color: rgb(33, 191, 191);
+                    }
+                }
+            }
+        }
+
+    }
+}

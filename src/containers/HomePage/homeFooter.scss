@@ -1,0 +1,84 @@
+.footer-container {
+    .footer-up {
+        background-color: #efefef;
+        padding-top: 15px;
+        .footer-content {
+            display: flex;
+            margin: 0 90px;
+            .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 50%;
+            height: 300px;
+            .logo-footer {
+                background-image: url('../../assets/images/logo-bookingcare.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 50px;            
+                width: 200px; 
+                cursor: pointer;
+            }
+            .name-text {
+                font-weight: bolder;
+            }     
+       }
+       .footer-right {
+           width: 50%;
+           height: 300px;
+           display: flex;
+           justify-content: space-around;
+           .content-left {
+               .option {
+                   list-style: none;
+                   li {
+                       margin-bottom: 9px;
+                       a {
+                        color: #45c3d2;
+                       }
+                   }
+               }
+           }
+           .content-right {
+               display: flex;
+               flex-direction: column;
+               gap: 8px;
+               .content-right-body {
+                font-size: 15px ;
+                   .content-right-title {
+                       font-weight: bolder;
+                   }
+               }
+           }
+          
+       }
+       }
+    }
+   
+    .footer-down {
+        background-color:#64b9e5;
+        padding: 15px;
+        .footer-bottom {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 90px;
+            .footer-bottom-text {
+                color: white;
+            }
+            .icon {
+                display: flex;
+                gap: 10px;
+                .fa-facebook-square {
+                    font-size: 40px;
+                    color: rgb(37, 37, 208);
+                }
+                .fa-youtube {
+                    font-size: 40px;
+                    color: red;
+                }
+            }
+        }
+    }
+  
+}

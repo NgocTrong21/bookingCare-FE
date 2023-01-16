@@ -1,0 +1,14 @@
+.text-verify {
+    .verify-succeed {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bolder;
+        color: red;
+    }
+    .verify-failed {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bolder;
+        color: red;
+    }
+}
