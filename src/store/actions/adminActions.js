@@ -348,10 +348,9 @@ export const saveDetailDoctorStart = (data) => {
         dispatch(saveDetailDoctorSuccess());
       } else {
         console.log(res);
-        dispatch(saveDetailDoctorFailed());
+        dispatch(saveDetailDoctorFailed(res));
       }
     } catch (e) {
-      dispatch(saveDetailDoctorFailed());
       console.log(e);
     }
   };
@@ -365,9 +364,8 @@ export const saveDetailDoctorSuccess = () => {
   };
 };
 
-export const saveDetailDoctorFailed = () => {
-  toast.error("Save Infor Detail Doctor Failed!");
-  console.log("Save Detail Doctor Failed");
+export const saveDetailDoctorFailed = (res) => {
+  toast.error(res.message);
   return {
     type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
   };

@@ -189,6 +189,9 @@ class DoctorRedux extends Component {
             payment: payment,
             specialty: specialty,
             clinic: clinic,
+            nameClinic: clinic && clinic.label ? clinic.label : "",
+            addressClinic: clinic && clinic.address ? clinic.address : "",
+            provinceId: clinic && clinic.provinceId ? clinic.provinceId : "",
           });
         }
 
@@ -253,7 +256,7 @@ class DoctorRedux extends Component {
     console.log("check clinic state: ", this.state);
     let { price, payment, note, specialty, clinic } = this.state;
     return (
-      <CustomScrollbars style={{ height: "95vh", width: "100vw" }}>
+      <CustomScrollbars style={{ height: "90vh", width: "100vw" }}>
         <div className="manage-doctor-container">
           <div className="manage-doctor-title">Quản lý bác sĩ</div>
           <div className="manage-doctor-header">

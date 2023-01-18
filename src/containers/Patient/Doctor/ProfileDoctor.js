@@ -6,6 +6,7 @@ import moment from "moment";
 import "./profileDoctor.scss";
 import { userServices } from "../../../services";
 import _ from "lodash";
+import Background from "../../../assets/images/avatar-profile.png";
 
 class ProfileDoctor extends Component {
   constructor(props) {
@@ -86,7 +87,7 @@ class ProfileDoctor extends Component {
               backgroundImage: `url(${
                 this.state.dataDoctor && this.state.dataDoctor.image
                   ? this.state.dataDoctor.image
-                  : ""
+                  : Background
               })`,
             }}
           ></div>

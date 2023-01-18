@@ -132,7 +132,7 @@ class DefaultClass extends Component {
         <div className="booking-content container">
           <div className="booking-header">
             <div className="icon">
-              <div>Thông tin đặt lịch khám bệnh</div>
+              <div className="title">Thông tin đặt lịch khám bệnh</div>
               <i class="fas fa-times" onClick={this.props.handleCloseModal}></i>
             </div>
             <div className="infor-doctor">

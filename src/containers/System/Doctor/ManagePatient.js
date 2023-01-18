@@ -117,8 +117,7 @@ class ManagePatient extends Component {
                     <th>Giới tính</th>
                     <th>Thao tác</th>
                   </tr>
-                  {patientArr &&
-                    patientArr.length > 0 &&
+                  {patientArr && patientArr.length > 0 ? (
                     patientArr.map((item, index) => (
                       <tr key={index}>
                         <td>{index + 1}</td>
@@ -133,7 +132,14 @@ class ManagePatient extends Component {
                           </button>
                         </td>
                       </tr>
-                    ))}
+                    ))
+                  ) : (
+                    <tr className="nodata">
+                      <td colSpan="6" style={{ textAlign: "center" }}>
+                        Không có lịch khám nào
+                      </td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             </div>

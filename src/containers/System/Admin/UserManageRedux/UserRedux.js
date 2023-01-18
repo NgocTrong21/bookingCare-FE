@@ -8,6 +8,7 @@ import CommonUtils from "../../../../utils/CommonUtils";
 import * as actions from "../../../../store/actions";
 import TableUserRedux from "./TableUserRedux";
 import "./userRedux.scss";
+import CustomScrollbars from "../../../..//components/CustomScrollbars";
 import Background from "../../../../assets/images/avatar-profile.png";
 
 class UserRedux extends Component {
@@ -228,213 +229,222 @@ class UserRedux extends Component {
     } = this.state;
     return (
       <>
-        <div className="user-redux-container">
-          <div className="title">User Redux hoi dan It</div>
-          <div className="user-redux-body">
-            <div className="container">
-              <div className="row">
-                <form className="col-12">
-                  <div className="form-row">
-                    <div className="title-create col-12 mt-3">
-                      Create a new user
+        <CustomScrollbars style={{ height: "90vh", width: "100vw" }}>
+          <div className="user-redux-container">
+            <div className="title">Quản lý người dùng hệ thống</div>
+            <div className="user-redux-body">
+              <div className="container">
+                <div className="row">
+                  <form className="col-12">
+                    <div className="form-row">
+                      <div className="title-create col-12 mt-3">
+                        Thêm mới người dùng
+                      </div>
+                      {this.props.isLoading && (
+                        <div className="col-12 mt-3 mb-3">Loading</div>
+                      )}
+                      <div className="form-group col-md-3">
+                        <label htmlFor="inputEmail4">Email</label>
+                        <input
+                          type="email"
+                          className="form-control"
+                          placeholder="Email"
+                          name="email"
+                          value={email}
+                          onChange={(e) => {
+                            this.onChangeInput(e.target.value, "email");
+                          }}
+                          disabled={
+                            this.state.action === CRUD_ACTIONS.EDIT
+                              ? true
+                              : false
+                          }
+                        />
+                      </div>
+                      <div className="form-group col-md-3">
+                        <label htmlFor="inputPassword4">Mật khẩu</label>
+                        <input
+                          type="password"
+                          className="form-control"
+                          name="password"
+                          placeholder="Mật khẩu"
+                          value={password}
+                          onChange={(e) => {
+                            this.onChangeInput(e.target.value, "password");
+                          }}
+                          disabled={
+                            this.state.action === CRUD_ACTIONS.EDIT
+                              ? true
+                              : false
+                          }
+                        />
+                      </div>
+                      <div className="form-group col-md-3">
+                        <label htmlFor="inputAddress">Họ</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="firstName"
+                          value={firstName}
+                          placeholder="Họ"
+                          onChange={(e) => {
+                            this.onChangeInput(e.target.value, "firstName");
+                          }}
+                        />
+                      </div>
+                      <div className="form-group col-md-3">
+                        <label htmlFor="inputAddress2">Tên</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="lastName"
+                          value={lastName}
+                          placeholder="Tên"
+                          onChange={(e) => {
+                            this.onChangeInput(e.target.value, "lastName");
+                          }}
+                        />
+                      </div>
                     </div>
-                    {this.props.isLoading && (
-                      <div className="col-12 mt-3 mb-3">Loading</div>
-                    )}
-                    <div className="form-group col-md-3">
-                      <label htmlFor="inputEmail4">Email</label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        placeholder="Email"
-                        name="email"
-                        value={email}
-                        onChange={(e) => {
-                          this.onChangeInput(e.target.value, "email");
-                        }}
-                        disabled={
-                          this.state.action === CRUD_ACTIONS.EDIT ? true : false
-                        }
-                      />
+                    <div className="form-row">
+                      <div className="form-group col-md-3">
+                        <label htmlFor="inputCity">Số điện thoại</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="phonenumber"
+                          value={phonenumber}
+                          placeholder="Số điện thoại"
+                          onChange={(e) => {
+                            this.onChangeInput(e.target.value, "phonenumber");
+                          }}
+                        />
+                      </div>
+                      <div className="form-group col-md-3">
+                        <label htmlFor="inputState">Giới tính</label>
+                        <select
+                          name="gender"
+                          className="form-control"
+                          onChange={(e) => {
+                            this.onChangeInput(e.target.value, "gender");
+                          }}
+                          value={gender}
+                        >
+                          {genders &&
+                            genders.length > 0 &&
+                            genders.map((item, index) => (
+                              <option key={index} value={item.keyMap}>
+                                {item.valueVi}
+                              </option>
+                            ))}
+                        </select>
+                      </div>
+                      <div className="form-group col-md-3">
+                        <label htmlFor="inputZip">Vai trò</label>
+                        <select
+                          name="roleId"
+                          className="form-control"
+                          onChange={(e) => {
+                            this.onChangeInput(e.target.value, "role");
+                          }}
+                          value={role}
+                        >
+                          {roles &&
+                            roles.length > 0 &&
+                            roles.map((item, index) => (
+                              <option key={index} value={item.keyMap}>
+                                {item.valueVi}
+                              </option>
+                            ))}
+                        </select>
+                      </div>
+                      <div className="form-group col-md-3">
+                        <label htmlFor="inputZip">Chức vụ</label>
+                        <select
+                          name="positionId"
+                          className="form-control"
+                          onChange={(e) => {
+                            this.onChangeInput(e.target.value, "position");
+                          }}
+                          value={position}
+                        >
+                          {positions &&
+                            positions.length > 0 &&
+                            positions.map((item, index) => (
+                              <option key={index} value={item.keyMap}>
+                                {item.valueVi}
+                              </option>
+                            ))}
+                        </select>
+                      </div>
                     </div>
-                    <div className="form-group col-md-3">
-                      <label htmlFor="inputPassword4">Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        name="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => {
-                          this.onChangeInput(e.target.value, "password");
-                        }}
-                        disabled={
-                          this.state.action === CRUD_ACTIONS.EDIT ? true : false
-                        }
-                      />
-                    </div>
-                    <div className="form-group col-md-3">
-                      <label htmlFor="inputAddress">First Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="firstName"
-                        value={firstName}
-                        placeholder="First Name"
-                        onChange={(e) => {
-                          this.onChangeInput(e.target.value, "firstName");
-                        }}
-                      />
-                    </div>
-                    <div className="form-group col-md-3">
-                      <label htmlFor="inputAddress2">Last Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="lastName"
-                        value={lastName}
-                        placeholder="Last Name"
-                        onChange={(e) => {
-                          this.onChangeInput(e.target.value, "lastName");
-                        }}
-                      />
-                    </div>
-                  </div>
-                  <div className="form-row">
-                    <div className="form-group col-md-3">
-                      <label htmlFor="inputCity">Phone Number</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="phonenumber"
-                        value={phonenumber}
-                        placeholder="Phone Number"
-                        onChange={(e) => {
-                          this.onChangeInput(e.target.value, "phonenumber");
-                        }}
-                      />
-                    </div>
-                    <div className="form-group col-md-3">
-                      <label htmlFor="inputState">Sex</label>
-                      <select
-                        name="gender"
-                        className="form-control"
-                        onChange={(e) => {
-                          this.onChangeInput(e.target.value, "gender");
-                        }}
-                        value={gender}
-                      >
-                        {genders &&
-                          genders.length > 0 &&
-                          genders.map((item, index) => (
-                            <option key={index} value={item.keyMap}>
-                              {item.valueEn}
-                            </option>
-                          ))}
-                      </select>
-                    </div>
-                    <div className="form-group col-md-3">
-                      <label htmlFor="inputZip">Role</label>
-                      <select
-                        name="roleId"
-                        className="form-control"
-                        onChange={(e) => {
-                          this.onChangeInput(e.target.value, "role");
-                        }}
-                        value={role}
-                      >
-                        {roles &&
-                          roles.length > 0 &&
-                          roles.map((item, index) => (
-                            <option key={index} value={item.keyMap}>
-                              {item.valueEn}
-                            </option>
-                          ))}
-                      </select>
-                    </div>
-                    <div className="form-group col-md-3">
-                      <label htmlFor="inputZip">Position</label>
-                      <select
-                        name="positionId"
-                        className="form-control"
-                        onChange={(e) => {
-                          this.onChangeInput(e.target.value, "position");
-                        }}
-                        value={position}
-                      >
-                        {positions &&
-                          positions.length > 0 &&
-                          positions.map((item, index) => (
-                            <option key={index} value={item.keyMap}>
-                              {item.valueEn}
-                            </option>
-                          ))}
-                      </select>
-                    </div>
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      this.handleSaveUser();
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        this.handleSaveUser();
+                      }}
+                    >
+                      {this.state.action === CRUD_ACTIONS.EDIT
+                        ? "Edit User"
+                        : "Create"}
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div className="user-redux-image">
+                <div className="title-image">Ảnh đại diện</div>
+                <label htmlFor="userImage">
+                  <div
+                    className="preview-image"
+                    style={{
+                      backgroundImage: `url(${
+                        this.state.previewImage !== ""
+                          ? this.state.previewImage
+                          : Background
+                      })`,
                     }}
-                  >
-                    {this.state.action === CRUD_ACTIONS.EDIT
-                      ? "Edit User"
-                      : "Create"}
-                  </button>
-                </form>
+                  ></div>
+                </label>
+                <input
+                  id="userImage"
+                  name="user-image"
+                  type="file"
+                  hidden
+                  value={this.state.valueImage}
+                  onChange={(e) => this.handleOnChangeImage(e)}
+                />
+                {this.state.previewImage && (
+                  <div className="btn-view">
+                    <button
+                      className="btn-view-left"
+                      onClick={this.handleViewImage}
+                    >
+                      Xem ảnh
+                    </button>
+                    <button
+                      className="btn-view-right"
+                      onClick={this.handleResetImage}
+                    >
+                      Xoá ảnh
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
-            <div className="user-redux-image">
-              <div className="title-image">Avatar</div>
-              <label htmlFor="userImage">
-                <div
-                  className="preview-image"
-                  style={{
-                    backgroundImage: `url(${
-                      this.state.previewImage !== ""
-                        ? this.state.previewImage
-                        : Background
-                    })`,
-                  }}
-                ></div>
-              </label>
-              <input
-                id="userImage"
-                name="user-image"
-                type="file"
-                hidden
-                value={this.state.valueImage}
-                onChange={(e) => this.handleOnChangeImage(e)}
-              />
-              {this.state.previewImage && (
-                <div className="btn-view">
-                  <button
-                    className="btn-view-left"
-                    onClick={this.handleViewImage}
-                  >
-                    View Image
-                  </button>
-                  <button
-                    className="btn-view-right"
-                    onClick={this.handleResetImage}
-                  >
-                    Clear
-                  </button>
-                </div>
-              )}
-            </div>
           </div>
-        </div>
-        <TableUserRedux handleEditUserRedux={this.handleEditUserRedux} />
-        {this.state.isOpen === true && (
-          <Lightbox
-            mainSrc={this.state.previewImage}
-            onCloseRequest={() => this.setState({ isOpen: false })}
+          <TableUserRedux
+            className="m-3"
+            handleEditUserRedux={this.handleEditUserRedux}
           />
-        )}
+          {this.state.isOpen === true && (
+            <Lightbox
+              mainSrc={this.state.previewImage}
+              onCloseRequest={() => this.setState({ isOpen: false })}
+            />
+          )}
+        </CustomScrollbars>
       </>
     );
   }

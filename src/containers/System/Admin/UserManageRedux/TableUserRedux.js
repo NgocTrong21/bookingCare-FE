@@ -44,10 +44,10 @@ class TableUserRedux extends Component {
             <tbody>
               <tr>
                 <th>Email</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Adress</th>
-                <th>Actions</th>
+                <th>Họ</th>
+                <th>Tên</th>
+                <th>Số điện thoại</th>
+                <th>Thao tác</th>
               </tr>
               {arrUsers &&
                 arrUsers.length > 0 &&
@@ -56,7 +56,7 @@ class TableUserRedux extends Component {
                     <td>{item.email}</td>
                     <td>{item.firstName}</td>
                     <td>{item.lastName}</td>
-                    <td>{item.address}</td>
+                    <td>{item.phonenumber}</td>
                     <td>
                       <button
                         className="mx-1"
@@ -64,7 +64,7 @@ class TableUserRedux extends Component {
                           this.handleEditUser(item);
                         }}
                       >
-                        Edit
+                        Chỉnh sửa
                       </button>
                       <button
                         className="mx-1"
@@ -72,7 +72,7 @@ class TableUserRedux extends Component {
                           this.handleDeleteUser(item.id);
                         }}
                       >
-                        Delete
+                        Xoá
                       </button>
                     </td>
                   </tr>

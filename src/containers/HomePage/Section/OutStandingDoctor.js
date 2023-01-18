@@ -79,7 +79,7 @@ class OutStandingDoctor extends Component {
                         }}
                       ></div>
                       <div className="doctor-name">{name}</div>
-                      <div>Cơ xương khớp</div>
+                      <div>{item.Doctor_Infor.detailSpecialty.name || ""}</div>
                     </div>
                   );
                 })}
