@@ -32,6 +32,7 @@
                 "header": "System Administrator",
                 "user-manage": "User manage",
                 "doctor-manage": "Doctor manage",
+                "user-redux": "User manage",
                 "product-manage": "Package manage",
                 "register-package-group-or-account": "Register service package for group/account"
             },

@@ -7,7 +7,7 @@ import Lightbox from "react-image-lightbox";
 import "./specialtyManage.scss";
 import CommonUtils from "../../../utils/CommonUtils";
 import CustomScrollbars from "../../../components/CustomScrollbars";
-import Background from "../../../assets/images/avatar-profile.png";
+import Background from "../../../assets/images/specialty-avatar2.png";
 import { userServices } from "../../../services";
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -111,7 +111,7 @@ class SpecialtyManage extends Component {
               ></input>
             </div>
             <div className="user-redux-image">
-              <div className="title-image">Avatar</div>
+              <div className="title-image">Ảnh chuyên khoa</div>
               <label htmlFor="userImage">
                 <div
                   className="preview-image"
@@ -138,13 +138,13 @@ class SpecialtyManage extends Component {
                     className="btn-view-left"
                     onClick={this.handleViewImage}
                   >
-                    View Image
+                    Xem ảnh
                   </button>
                   <button
                     className="btn-view-right"
                     onClick={this.handleResetImage}
                   >
-                    Clear
+                    Xoá ảnh
                   </button>
                 </div>
               )}

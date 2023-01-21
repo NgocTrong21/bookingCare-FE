@@ -3,18 +3,18 @@ export const adminMenu = [
     //hệ thống
     name: "menu.admin.user",
     menus: [
-      {
-        name: "menu.system.system-administrator.user-manage",
-        link: "/system/user-manage",
-      },
+      // {
+      //   name: "menu.system.system-administrator.user-manage",
+      //   link: "/system/user-manage",
+      // },
       {
         name: "menu.system.system-administrator.user-redux",
         link: "/system/user-redux",
       },
-      {
-        name: "menu.system.system-administrator.user-function-component",
-        link: "/system/user-function-component",
-      },
+      // {
+      //   name: "menu.system.system-administrator.user-function-component",
+      //   link: "/system/user-function-component",
+      // },
       {
         name: "menu.system.system-administrator.doctor-manage",
         link: "/system/doctor-manage",
@@ -45,16 +45,16 @@ export const adminMenu = [
       },
     ],
   },
-  {
-    //cẩm nang
-    name: "menu.admin.handbook",
-    menus: [
-      {
-        name: "menu.system.system-administrator.user-manage",
-        link: "/system/user-manage",
-      },
-    ],
-  },
+  // {
+  //   //cẩm nang
+  //   name: "menu.admin.handbook",
+  //   menus: [
+  //     {
+  //       name: "menu.system.system-administrator.user-manage",
+  //       link: "/system/user-manage",
+  //     },
+  //   ],
+  // },
 ];
 
 export const doctorMenu = [

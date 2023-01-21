@@ -37,8 +37,6 @@ class Login extends Component {
   };
 
   handleLogin = async () => {
-    console.log("username:", this.state.username);
-    console.log("password:", this.state.password);
     this.setState({ loginError: "" });
     try {
       let data = await userServices.handleLoginApi(

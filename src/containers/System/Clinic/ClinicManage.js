@@ -8,7 +8,7 @@ import Select from "react-select";
 import "./clinicManage.scss";
 import CommonUtils from "../../../utils/CommonUtils";
 import CustomScrollbars from "../../../components/CustomScrollbars";
-import Background from "../../../assets/images/avatar-profile.png";
+import Background from "../../../assets/images/building-avatar.jpg";
 import { userServices } from "../../../services";
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -166,7 +166,7 @@ class ClinicManage extends Component {
               </div>
             </div>
             <div className="clinic-image">
-              <div className="title-image">Avatar</div>
+              <div className="title-image">Ảnh phòng khám</div>
               <label htmlFor="clinicImage">
                 <div
                   className="preview-image"
@@ -193,13 +193,13 @@ class ClinicManage extends Component {
                     className="btn-view-left"
                     onClick={this.handleViewImage}
                   >
-                    View Image
+                    Xem ảnh
                   </button>
                   <button
                     className="btn-view-right"
                     onClick={this.handleResetImage}
                   >
-                    Clear
+                    Xoá ảnh
                   </button>
                 </div>
               )}
